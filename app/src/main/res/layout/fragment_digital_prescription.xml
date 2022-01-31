@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:elevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back_white"
+            app:title="@string/add_digital_prescription"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsvPrescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dp_24">
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/startGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/endGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/dp_16" />
+
+                <TextView
+                    android:id="@+id/tvPatient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:fontFamily="@font/campton_semibold"
+                    android:text="@string/patient"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_18"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivPic"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile_placeholder"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPatient"
+                    app:riv_corner_radius="44dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/campton_book"
+                    android:maxLines="1"
+                    android:text="@string/patient"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintStart_toEndOf="@id/ivPic"
+                    app:layout_constraintTop_toTopOf="@+id/ivPic" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:alpha="0.5"
+                    android:fontFamily="@font/campton_book"
+                    android:text="@string/patient"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintStart_toEndOf="@id/ivPic"
+                    app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:background="@color/lineColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivPic" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAppointment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:fontFamily="@font/campton_semibold"
+                    android:text="@string/appointment"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_18"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAppointmentV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:alpha="0.8"
+                    android:fontFamily="@font/campton_book"
+                    android:text="@string/appointment"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAppointment" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ilMedicineName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAppointmentV">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etMedicineName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/campton_medium"
+                        android:hint="@string/medicine_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapSentences"
+                        android:maxLength="100"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_16" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDuration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:alpha="0.7"
+                    android:fontFamily="@font/campton_book"
+                    android:text="@string/duration"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDosagesType"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/ilMedicineName" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDosagesType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:alpha="0.7"
+                    android:fontFamily="@font/campton_book"
+                    android:text="@string/dosage_type"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toEndOf="@+id/tvDuration"
+                    app:layout_constraintTop_toTopOf="@+id/tvDuration" />
+
+                <Spinner
+                    android:id="@+id/spnDuration"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:entries="@array/duration"
+                    android:fontFamily="@font/campton_medium"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/tvDuration"
+                    app:layout_constraintStart_toStartOf="@id/tvDuration"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDuration" />
+
+
+                <Spinner
+                    android:id="@+id/spnDosagesType"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:entries="@array/dose_type"
+                    android:fontFamily="@font/campton_medium"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/tvDosagesType"
+                    app:layout_constraintStart_toStartOf="@id/tvDosagesType"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDosagesType" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDosagesTiming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:alpha="0.7"
+                    android:fontFamily="@font/campton_book"
+                    android:text="@string/dosage_timings"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/spnDuration" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDoasesTiming"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDosagesTiming"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/rv_item_doases" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:alpha="0.7"
+                    android:background="@drawable/drawable_theme_stroke_rounded"
+                    android:fontFamily="@font/campton_semibold"
+                    android:gravity="center"
+                    android:text="@string/add"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toStartOf="@id/tvReset"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/rvDoasesTiming" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:alpha="0.7"
+                    android:background="@drawable/drawable_stroke_reset"
+                    android:fontFamily="@font/campton_semibold"
+                    android:gravity="center"
+                    android:text="@string/reset"
+                    android:textColor="@color/colorReset"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toEndOf="@+id/tvAdd"
+                    app:layout_constraintTop_toTopOf="@+id/tvAdd" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPrescriptions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:fontFamily="@font/campton_medium"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:text="@string/prescriptions"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_18"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAdd" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPrescriptions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_20"
+                    android:visibility="gone"
+                    tools:listitem="@layout/rv_item_prescription"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPrescriptions"
+                    tools:itemCount="2" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPrescriptionNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:alpha="0.8"
+                    android:fontFamily="@font/campton_medium"
+                    android:text="@string/prescription_notes"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/rvPrescriptions" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPrescriptionNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/drawable_grey_stroke"
+                    android:fontFamily="@font/campton_book"
+                    android:gravity="start"
+                    android:hint="@string/add_notes"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:lines="8"
+                    android:maxLength="1000"
+                    android:maxLines="8"
+                    android:padding="@dimen/dp_16"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPrescriptionNotes" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@drawable/drawable_theme_40"
+                    android:fontFamily="@font/campton_semibold"
+                    android:gravity="center"
+                    android:text="@string/done"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/etPrescriptionNotes" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

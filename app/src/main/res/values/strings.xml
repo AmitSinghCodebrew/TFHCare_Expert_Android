@@ -1,0 +1,513 @@
+<resources>
+    <string name="app_name">TFH Care Pro</string>
+
+    <!--Facebook keys-->
+    <string name="facebook_app_id">1103838806679919</string>
+    <string name="fb_login_protocol_scheme">fb1103838806679919</string>
+
+    <!--Deep Link-->
+    <string name="deep_link_url" translatable="false">healthcaremydoctor.page.link</string>
+    <string name="deep_link_ios_bundle" translatable="false">com.healthcareExpert.prashant</string>
+
+    <!--Other App id to open-->
+    <string name="app_application_id" translatable="false">com.mydoctor.user</string>
+
+    <!--Google-->
+    <string name="google_places_api_key" translatable="false">AIzaSyCdMFf-RjfQpnOoKuzKD37U6-0J0s_og3w</string>
+    <string name="server_client_id">960044561911-pq649ukejsu8a11v09178fhre9060mhh.apps.googleusercontent.com</string>
+
+    <!--Pdf Link-->
+    <string name="pdf_link">https://thefinesthealthcare.com/generate-pdf?request_id=%s&amp;client_id=%s</string>
+
+    <string name="update_desc">You have new update for %s!</string>
+    <string name="create_a_account">Create a %s\naccount to continue</string>
+
+    <string name="allow">ALLOW</string>
+    <string name="deny">Deny</string>
+    <string name="settings">Settings</string>
+    <string name="media_permission">This feature needs permission to use camera and external storage.</string>
+    <string name="internet">Internet</string>
+    <string name="check_internet">Please check your internet connection</string>
+    <string name="ok">OK</string>
+    <string name="alert">Alert</string>
+    <string name="login">Login</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="login_using_email">Login using Email</string>
+    <string name="signup_with_email">Sign Up with Email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="we_need_your_phone">We need your Phone number to identify you.</string>
+    <string name="code_sent_to">Code sent to %s</string>
+    <string name="resend_code">Resend code</string>
+    <string name="didn_t_receive_the_code_yet">Didn’t receive the code yet?</string>
+    <string name="verification">Verification</string>
+    <string name="we_sent_you_a_code">We sent you a code to %s</string>
+    <string name="enter_otp">Please enter otp</string>
+    <string name="location">Location</string>
+    <string name="chat">Chat</string>
+    <string name="call">Call</string>
+    <string name="feeds">Feeds</string>
+
+    <string name="patients">Consultations</string>
+    <string name="experience">Experience</string>
+    <string name="reviews">Reviews</string>
+    <string name="about">About</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="notification">Notification</string>
+    <string name="logout">Logout</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="invite_people">Invite People</string>
+    <string name="version">Version %s</string>
+    <string name="you_are_running_the_latest_version">You are running the latest version</string>
+    <string name="appointments">Appointments</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="password">Password</string>
+    <string name="re_enter_password">Re-Enter Password</string>
+    <string name="bio">Bio</string>
+    <string name="edit">Edit</string>
+    <string name="view">View</string>
+    <string name="age">Age:</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="dob">DOB</string>
+    <string name="we_need_your_email_password">We need your Email &amp; Password to identify you.</string>
+    <string name="didn_t_have_an_account">Didn’t have an account?</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="wallet">Wallet</string>
+    <string name="revenue">Revenue</string>
+    <string name="all_Requests">All Requests</string>
+    <string name="calls">Calls</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="pay_out">Pay-out</string>
+
+    <string name="enter_name">Please enter name</string>
+    <string name="select_dob">Please select DOB</string>
+    <string name="enter_email">Please enter email</string>
+    <string name="enter_correct_email">Please enter correct email</string>
+    <string name="enter_password">Password length must be atleast 8 characters</string>
+    <string name="enter_bio">Please enter bio</string>
+
+    <string name="sign_out">Sign out</string>
+    <string name="logout_dialog_message">Are you sure you want to sign out?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="no_data_found">No data found</string>
+    <string name="total_chat">Total chat</string>
+    <string name="total_calls">Total calls</string>
+    <string name="s_completed">%s  Completed</string>
+    <string name="unsuccessful">%s Unsuccessful</string>
+    <string name="select_image">Select image</string>
+    <string name="select_document">Select document</string>
+    <string name="update">Update</string>
+    <string name="we_need_your_email">We need your registered email to reach you</string>
+    <string name="sent_password">We have sent a temporary password in your email. Please check your email.</string>
+    <string name="chat_request">Chat request</string>
+    <string name="call_equest">Call request</string>
+    <string name="new_request">New Request</string>
+    <string name="no_show">No show</string>
+    <string name="canceled">Cancelled</string>
+    <string name="cancel">Cancel</string>
+    <string name="start_request">Start request</string>
+    <string name="check_request">Check request</string>
+    <string name="start_request_message">Are you sure you want to proceed request</string>
+    <string name="add_money">Add Money</string>
+    <string name="added_to_wallet">Added to wallet</string>
+    <string name="failed_transaction">Transaction failed</string>
+    <string name="closing_balance">Closing Balance: %s</string>
+    <string name="accept_request">Accept request</string>
+    <string name="accept_request_message">Are you sure you want to accept this request</string>
+    <string name="accepted">Accepted</string>
+    <string name="inprogess">In progress</string>
+    <string name="starting_call">Starting a call…</string>
+    <string name="starting_chat">Starting a chat</string>
+    <string name="money_received_from">Received from\n%s</string>
+    <string name="speciality">Speciality</string>
+    <string name="years_of_experience">Years of experience</string>
+    <string name="consultation_fee_for_call">Consultation fee for Call</string>
+    <string name="min">min.</string>
+    <string name="consultation_fee_for_chat">Consultation fee for Chat</string>
+    <string name="na">NA</string>
+
+    <string name="typing">Typing…</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="active_now">Active now</string>
+    <string name="offline">Offline</string>
+    <string name="enter_message">Enter message</string>
+    <string name="type_your_message_here">Type your message…</string>
+    <string name="photo">Photo</string>
+    <string name="chat_first_message">Hi %s\nI am Available for chat lets discuss the problem</string>
+    <string name="end_chat">End Chat</string>
+    <string name="end_n_chat">End\nChat</string>
+    <string name="end_chat_desc">This will end chat. You will no longer be able to chat</string>
+    <string name="bank_account">Here is the bank account</string>
+    <string name="account_number">Account number</string>
+    <string name="account_name">Account Holder name</string>
+    <string name="bank_name">Bank name</string>
+    <string name="ifsc_code">IFSC code</string>
+    <string name="select_currency">Select currency</string>
+    <string name="add_bank">Add Bank</string>
+    <string name="edit_bank">Edit Bank</string>
+    <string name="card_ending_with">%s Card ending with %s</string>
+    <string name="years">years</string>
+    <string name="total_revenue_made">Total Revenue made</string>
+    <string name="request_completed">Request completed</string>
+    <string name="add_feed">Add feed</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+
+
+    <!--Twilio-->
+    <string name="answer">Answer</string>
+    <string name="decline">Decline</string>
+
+    <string name="classes">Classes</string>
+    <string name="add_new">Add new</string>
+    <string name="add_class">Add class</string>
+    <string name="select_date">Select date</string>
+    <string name="select_time">Select time</string>
+    <string name="price_of_class">Price of class</string>
+    <string name="class_name">Class Name</string>
+    <string name="class_time">Class Time</string>
+    <string name="class_price">Class Price</string>
+    <string name="start_class">Start Class</string>
+    <string name="select_category">Select Category</string>
+    <string name="category">Category</string>
+    <string name="start_class_message">By starting CLASS you ll make this class available for all who occupied. Want to start class?</string>
+    <string name="user_joined">User Joined</string>
+    <string name="complete_class">Complete Class</string>
+    <string name="complete_class_message">Are you sure want to complete this class?</string>
+
+    <string name="s_s_reviews">%s · %s Reviews</string>
+    <string name="please_select_category">Please Select Category</string>
+    <string name="to">To</string>
+    <string name="greater_time">End time must be greater than start time</string>
+    <string name="manage_availability">Manage Availability</string>
+    <string name="select_a_category">Select a Category</string>
+    <string name="let_us_know_who_you">Let us know which category suits your profile the most to continue</string>
+    <string name="select_sub_category">Select Sub-Category</string>
+    <string name="full_name">Full Name</string>
+    <string name="since_working">Since Working</string>
+    <string name="next">Next</string>
+    <string name="consultation_fees">Consultation Fees</string>
+    <string name="for_">For</string>
+    <string name="add_availability">Add availability</string>
+    <string name="add_availability_s">Add availability for %s</string>
+    <string name="service_type">Service Type</string>
+    <string name="set_preferences">Set Preferences</string>
+    <string name="from">From</string>
+    <string name="new_interval">+ New Interval</string>
+    <string name="sunday_w">S</string>
+    <string name="monday_w">M</string>
+    <string name="tuesday_w">T</string>
+    <string name="wednesday_w">W</string>
+    <string name="thursday_w">T</string>
+    <string name="friday_w">F</string>
+    <string name="saturday_w">S</string>
+    <string name="week_days">Week Days</string>
+    <string name="select_availability">Select Availability</string>
+    <string name="save">Save</string>
+    <string name="fixed_price">Fixed Price</string>
+    <string name="price_btw">Add price in %s to %s</string>
+    <string name="edit_availability">Edit availability</string>
+    <string name="select_service">Please select any service</string>
+    <string name="add_price_for">Add price for %s</string>
+    <string name="add_price__in_s">Add price in %s to %s for %s</string>
+    <string name="enter_title">Please select Title</string>
+    <string name="update_category">Update Category</string>
+    <string name="manage_preferences">Manage Preferences</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="for_s">For %s</string>
+    <string name="all_s">All %s</string>
+    <string name="all_weekdays">All Weekdays</string>
+
+
+    <array name="country">
+        <item>@string/select_country</item>
+        <item>IN</item>
+        <item>US</item>
+
+    </array>
+
+    <array name="currency">
+        <item>@string/select_currency</item>
+        <item>INR</item>
+        <item>USD</item>
+
+    </array>
+
+    <string name="dr">Dr.</string>
+    <string name="mr">Mr.</string>
+    <string name="mrs">Mrs.</string>
+    <string name="miss">Miss.</string>
+
+    <array name="dr_title">
+        <item>@string/title</item>
+        <item>@string/dr</item>
+        <item>@string/mr</item>
+        <item>@string/mrs</item>
+        <item>@string/miss</item>
+    </array>
+
+    <string name="profile">Profile</string>
+    <string name="transactions">Transaction History</string>
+    <string name="select_working_days">Please select working days</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="you_agree_to_our_terms">By continue, you agree to our\n</string>
+    <string name="terms">Terms of service</string>
+    <string name="and">and</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="chat_online_with_top_doctors">Chat Online\nwith Top Doctors</string>
+    <string name="at_20"><font size="14">At</font> %s20</string>
+    <string name="signup_with_phone_number">Sign Up with Phone Number</string>
+    <string name="let_s_get_started">Let’s Get Started !</string>
+    <string name="minute">Minute</string>
+    <string name="categories">Categories</string>
+    <string name="cancel_appointment">Cancel appointment</string>
+    <string name="cancel_appointment_msg">Are you sure you want to cancel appointment?</string>
+    <string name="join_consultants">Join 2500+ Consultants</string>
+    <string name="error_in_between_interval">Please don\'t add interval in between of previous intervals</string>
+    <string name="disconnecting">Disconnecting…</string>
+
+    <!--Empty screen-->
+    <string name="profile_unapproved">Your profile has not yet been approved!</string>
+    <string name="profile_rejected">Your profile has been rejected!</string>
+    <string name="profile_unapproved_desc">Once your profile has been approved, you ll start getting requests from users</string>
+    <string name="no_requests">No Requests!</string>
+    <string name="no_requests_desc">You don\'t have any requests at the moment!</string>
+    <string name="no_chat">No chat started yet!</string>
+    <string name="no_chat_desc">Once you accept a chat request and start chatting then your chat threads will appear here.</string>
+    <string name="no_transaction">No transaction history!</string>
+    <string name="no_transaction_desc">Once you successfully complete some requests, your transactions will appear here.</string>
+    <string name="no_classes">No classes created by you yet!</string>
+    <string name="no_classes_desc">Click on add button to create some classes which will appear here.</string>
+    <string name="no_notification">No notifications yet!</string>
+    <string name="no_notification_desc">All notifications related to your activities will appear here.</string>
+
+    <!--Share text-->
+    <string name="share">Share</string>
+    <string name="invite_text">Hey, Here is app for taking Online Consultancy Platform for Doctors, Physiotherapists, Accountants, Lawyers, Consultants etc. You should try it.</string>
+    <string name="edit_card">Edit card</string>
+    <string name="delete">Delete</string>
+    <string name="pay">Pay</string>
+    <string name="input_amount">Input amount</string>
+    <string name="select_card">Select card</string>
+    <string name="add_card">Add card</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="payment">Payment</string>
+    <string name="delete_message">Are you sure you want to delete this card?</string>
+    <string name="money_sent_account">Money sent to bank account\n(%s)</string>
+
+    <!--Insurance Address-->
+    <string name="start_your_journey">Start Your Journey now</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zip">Zip Code</string>
+    <string name="do_you_have_insurance">Do you accept insurance</string>
+    <string name="if_yes_what_insurance">If \'Yes\' what Insurance</string>
+    <string name="select_insurance">Your Accepted Insurance</string>
+    <string name="check_all_terms">Please check all terms</string>
+    <string name="select_state">Select State</string>
+    <string name="select_city">Select City</string>
+    <string name="submit">Submit</string>
+    <string name="add">Add</string>
+    <string name="upload_documents">Upload Documents</string>
+    <string name="please_add">Please add</string>
+    <string name="manage_documents">Manage Documents</string>
+
+    <string name="post_article_plus">+ Post Article</string>
+    <string name="post_article">Post Article</string>
+    <string name="latest_articles">Latest Articles</string>
+    <string name="blogs">Blogs</string>
+    <string name="articles">Articles</string>
+    <string name="post_blog_plus">+ Post Blog</string>
+    <string name="post_blog">Post Blog</string>
+    <string name="latest_blogs">Latest Blogs</string>
+    <string name="s_views">%s views</string>
+    <string name="favourites">Favourites</string>
+    <string name="my_articles">My Articles</string>
+
+    <string name="are_you_a_doctor_or_patient">Are you a Doctor or Patient?</string>
+    <string name="doctor">Doctor</string>
+    <string name="patient">Patient</string>
+
+    <!--Walk Through-->
+    <string name="walkthrough_1">Chat with Doctor</string>
+    <string name="walk_through_desc_1">Choose a speciality and have your doubts resolved through a Live chat made with Doctors</string>
+
+    <string name="walkthrough_2">Video/Audio Appointments</string>
+    <string name="walk_through_desc_2">Get appointments in seconds from the best leading doctors around you and get prescriptions </string>
+
+    <string name="walkthrough_3">Schedule Appointments</string>
+    <string name="walk_through_desc_3">You can also schedule your appointments with the best leading doctors</string>
+
+    <string name="walkthrough_4">Right Doctor</string>
+    <string name="walk_through_desc_4">Book an apppointment with the right doctor and get right advice from them</string>
+    <string name="get_started">Get Started</string>
+    <string name="login_with">Login With</string>
+    <string name="qualifications">Qualifications</string>
+    <string name="gender">Gender</string>
+    <string name="choose_language">Choose language</string>
+    <string name="select_gender">Select gender</string>
+
+    <!--E-Prescription-->
+    <string name="appointment">Appointment</string>
+    <string name="add_prescription">+ Prescription</string>
+    <string name="add_manual_prescription">Add Manual Prescription</string>
+    <string name="record_details">Record Details</string>
+    <string name="record_title">Record title</string>
+    <string name="add_images">Add Images</string>
+    <string name="add_digital_prescription">Add Digital Prescription</string>
+    <string name="prescription_notes">Prescription Notes</string>
+    <string name="add_notes">Add notes</string>
+    <string name="medicine_name">Medicine Name</string>
+    <string name="prescriptions">Prescriptions</string>
+    <string name="duration">Duration</string>
+    <string name="dosage_type">Dosage Type</string>
+    <string name="dosage_timings">Dosage Timings</string>
+    <string name="digital_prescription">Digital Prescription</string>
+    <string name="manual_prescription">Manual Prescription</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="dosage">"Dosage "</string>
+    <string name="before">Before</string>
+    <string name="after">After</string>
+    <string name="with">With</string>
+    <string name="reset">Reset</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="years_old">"years old "</string>
+    <string name="select_doasages_for">Select doases for %s</string>
+    <string name="select_dosage_timings">Select dosage Timings</string>
+    <string name="prescription_added">Prescription added</string>
+    <string name="view_prescription">View prescription</string>
+    <string name="applying_for">Apply for</string>
+    <string name="view_symptoms">View symptoms</string>
+    <string name="following_symptom">Following are the symptoms</string>
+    <string name="skip">Skip</string>
+    <string name="show_more">show more</string>
+    <string name="show_less">show less</string>
+
+    <array name="duration">
+        <item>@string/select</item>
+        <item>1 day</item>
+        <item>2 days</item>
+        <item>3 days</item>
+        <item>4 days</item>
+        <item>5 days</item>
+        <item>6 days</item>
+        <item>7 days</item>
+        <item>8 days</item>
+        <item>9 days</item>
+        <item>10 days</item>
+        <item>11 days</item>
+        <item>12 days</item>
+        <item>13 days</item>
+        <item>14 days</item>
+        <item>15 days</item>
+        <item>16 days</item>
+        <item>17 days</item>
+        <item>18 days</item>
+        <item>19 days</item>
+        <item>10 days</item>
+        <item>21 days</item>
+        <item>22 days</item>
+        <item>23 days</item>
+        <item>24 days</item>
+        <item>25 days</item>
+        <item>26 days</item>
+        <item>27 days</item>
+        <item>28 days</item>
+        <item>29 days</item>
+        <item>30 days</item>
+    </array>
+
+    <string name="select">Select</string>
+    <string name="tablet">Tablet</string>
+    <string name="capsule">Capsule</string>
+    <string name="syrup">Syrup</string>
+    <array name="dose_type">
+        <item>@string/select</item>
+        <item>@string/tablet</item>
+        <item>@string/capsule</item>
+        <item>@string/syrup</item>
+    </array>
+
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="four">Four</string>
+    <array name="doases">
+        <item>@string/select</item>
+        <item>@string/one</item>
+        <item>@string/two</item>
+        <item>@string/three</item>
+        <item>@string/four</item>
+    </array>
+
+    <!--Location permission-->
+    <string name="skip_for_now">Skip For Now</string>
+    <string name="use_my_location">Use My Location</string>
+    <string name="we_will_need_your_location">We will need your location to give you better experience</string>
+    <string name="allow_your_location">Allow Your Location</string>
+
+    <string name="view_details">View details</string>
+    <string name="second_opinion">Second opinion</string>
+    <string name="details">Details</string>
+
+    <string name="view_map">View map</string>
+    <string name="distance">Distance</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="map_not_found">Google map application not found</string>
+
+    <!--Tracking-->
+    <string name="we_will_need_call">We will need your call permission to give you better experience</string>
+    <string name="reached_destination">Reached Destination</string>
+    <string name="status">Status :</string>
+    <string name="start_service">Start Service</string>
+    <string name="cancel_service">Cancel Service</string>
+    <string name="service_status_update">Service Status Update</string>
+    <string name="current_status">Current Status</string>
+    <string name="status_update">Status Update</string>
+    <string name="arrived">Arrived</string>
+    <string name="started">Started</string>
+    <string name="change_service_status">Change Service Status</string>
+    <string name="pending">Pending</string>
+    <string name="update_status">Update Status</string>
+    <string name="clear">Clear</string>
+    <string name="estimate_time_of_arrival_s">Estimate Time of Arrival : %s</string>
+    <string name="quit">Quit</string>
+    <string name="quit_message">Are you sure you want to quit? It will stop your tracking</string>
+    <string name="service_completed">Service Completed</string>
+    <string name="track_status">Track Status</string>
+    <string name="canceled_service">Cancelled Service</string>
+
+    <string name="mark_complete">Mark Complete</string>
+    <string name="mark_complete_message">Are you sure you want to complete this request</string>
+    <string name="medical_record">Medical Record</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="pdf">Pdf</string>
+    <string name="account_setting">Account Setting</string>
+    <string name="change_password">Change Password</string>
+
+    <string name="completed">Completed</string>
+    <string name="price">Price</string>
+
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm New Password</string>
+    <string name="success">Success!</string>
+    <string name="password_changed_successfully">Your password changed successfully!</string>
+    <string name="select_future_date">Select Future date</string>
+    <string name="select_previos_date">Select Previous date</string>
+    <string name="prescription_details">Prescription detail</string>
+    <string name="downloading">Downloading…</string>
+    <string name="support">Help &amp; support</string>
+</resources>

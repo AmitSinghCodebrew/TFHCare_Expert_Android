@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingBottom="@dimen/dp_36"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toTopOf="@+id/viewLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/startGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/dp_24" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/endGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/dp_24" />
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/pageIndicatorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    app:layout_constraintStart_toStartOf="@+id/viewPager"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_gravity="center|bottom"
+                    app:ci_animator="@animator/scale_with_alpha"
+                    app:ci_drawable="@drawable/white_radius"
+                    app:ci_drawable_unselected="@drawable/white_radius"
+                    app:ci_gravity="center"
+                    app:ci_height="@dimen/dp_4"
+                    app:ci_margin="@dimen/dp_4"
+                    app:ci_orientation="horizontal"
+                    app:ci_width="@dimen/dp_16" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:fontFamily="@font/campton_semibold"
+                    android:gravity="center"
+                    android:text="@string/create_a_account"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_18"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@id/viewPager" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFacebook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:background="@drawable/drawable_bg_button"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_facebbok"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/dp_12"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:padding="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:text="@string/facebook"
+                    android:textAppearance="@style/Toolbar.LoginButton"
+                    app:layout_constraintEnd_toStartOf="@+id/tvGoogle"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_marginStart="@dimen/dp_38"
+                    android:background="@color/lineColor"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvFacebook"
+                    app:layout_constraintStart_toStartOf="@+id/tvFacebook"
+                    app:layout_constraintTop_toTopOf="@+id/tvFacebook" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGoogle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_bg_button"
+                    android:clickable="true"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:drawableStart="@drawable/ic_google"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/dp_12"
+                    android:padding="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:text="@string/google"
+                    android:textAppearance="@style/Toolbar.LoginButton"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toEndOf="@+id/tvFacebook"
+                    app:layout_constraintTop_toTopOf="@+id/tvFacebook" />
+
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_marginStart="@dimen/dp_38"
+                    android:background="@color/lineColor"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvGoogle"
+                    app:layout_constraintStart_toStartOf="@+id/tvGoogle"
+                    app:layout_constraintTop_toTopOf="@+id/tvGoogle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/drawable_bg_button"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="@string/signup_with_phone_number"
+                    android:textAppearance="@style/Toolbar.LoginButton"
+                    app:drawableTint="@color/colorBlack"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFacebook" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/drawable_bg_button"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/signup_with_email"
+                    android:textAppearance="@style/Toolbar.LoginButton"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMobile" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_dropdown"
+                    android:layout_marginTop="@dimen/dp_56"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEmail"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:fontFamily="@font/campton_book"
+                    android:gravity="center"
+                    android:text="@string/you_agree_to_our_terms"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@id/ivArrow" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:id="@+id/viewLogin"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:background="@color/colorLoginTag"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:alpha="0.7"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/campton_semibold"
+            android:padding="@dimen/dp_4"
+            android:text="@string/already_have_an_account"
+            android:textAppearance="@style/Toolbar.LoginButton"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/viewLogin"
+            app:layout_constraintEnd_toStartOf="@+id/tvLogin"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewLogin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/campton_semibold"
+            android:padding="@dimen/dp_4"
+            android:text="@string/login"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/viewLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvNewUser"
+            app:layout_constraintTop_toTopOf="@+id/viewLogin" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

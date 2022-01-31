@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDateLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTextLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDateLeft"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="114dp"
+            android:autoLink="web"
+            android:background="@drawable/drawable_chat_left"
+            android:elevation="4dp"
+            android:fontFamily="@font/campton_medium"
+            android:minWidth="48dp"
+            android:padding="8dp"
+            android:textColor="@color/colorBlack"
+            android:textColorLink="@color/colorLink"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPdfLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTextLeft"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="114dp"
+            android:background="@drawable/drawable_white_8"
+            android:drawableStart="@drawable/ic_pdf"
+            android:drawablePadding="@dimen/dp_4"
+            android:elevation="4dp"
+            android:fontFamily="@font/campton_medium"
+            android:minWidth="48dp"
+            android:padding="8dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImageLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPdfLeft"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="2dp"
+            app:cardCornerRadius="16dp"
+            app:cardPreventCornerOverlap="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivImageLeft"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_placeholder" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvImageLeft"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/campton_medium"
+            android:textColor="@color/textColor"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</layout>

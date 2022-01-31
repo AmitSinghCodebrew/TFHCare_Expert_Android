@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:elevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back_white"
+            app:title="@string/details"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/startGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/dp_24" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/endGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/dp_24" />
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivPic"
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_placeholder"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_border_color="@color/lineColor"
+                    app:riv_border_width="2dp"
+                    app:riv_corner_radius="80dp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/campton_semibold"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+                    app:layout_constraintStart_toEndOf="@+id/ivPic"
+                    app:layout_constraintTop_toTopOf="@+id/ivPic" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/campton_semibold"
+                    android:text="@string/new_request"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvName"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/tvName" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:background="@color/lineColor"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPic" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:alpha="0.6"
+                    android:drawableStart="@drawable/ic_location"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/campton_medium"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/tvViewMap"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@id/view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvViewMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_next"
+                    android:ellipsize="end"
+                    android:focusable="true"
+                    android:fontFamily="@font/campton_medium"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:paddingStart="@dimen/dp_8"
+                    android:paddingEnd="@dimen/dp_8"
+                    android:text="@string/view_map"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/tvLocation" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvServiceType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:fontFamily="@font/campton_medium"
+                    android:text="@string/service_type"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvServiceTypeV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/campton_semibold"
+                    android:text="@string/service_type"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/tvServiceType" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/campton_medium"
+                    android:text="@string/distance"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvServiceTypeV" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDistanceV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/campton_semibold"
+                    android:text="@string/service_type"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/tvDistance" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookingDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/campton_medium"
+                    android:text="@string/date"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDistanceV" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookingDateV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:fontFamily="@font/campton_semibold"
+                    android:gravity="end"
+                    android:text="@string/service_type"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/tvBookingDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/campton_medium"
+                    android:text="@string/time"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBookingDateV" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookingTimeV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/campton_semibold"
+                    android:text="@string/service_type"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/tvBookingTime" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookingPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/campton_medium"
+                    android:text="@string/price"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBookingTime" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookingPriceV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/campton_semibold"
+                    tools:text="@string/service_type"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/tvBookingPrice" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:background="@drawable/drawable_stroke_red_8"
+                    android:fontFamily="@font/campton_semibold"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/colorCancel"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toStartOf="@+id/tvAccept"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBookingPrice" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_theme_8"
+                    android:fontFamily="@font/campton_semibold"
+                    android:gravity="center"
+                    android:text="@string/accept_request"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toEndOf="@+id/tvCancel"
+                    app:layout_constraintTop_toTopOf="@id/tvCancel"
+                    app:layout_goneMarginTop="@dimen/dp_24" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMarkComplete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/drawable_theme_8"
+                    android:fontFamily="@font/campton_semibold"
+                    android:gravity="center"
+                    android:text="@string/mark_complete"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_16"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAccept"
+                    app:layout_goneMarginTop="@dimen/dp_24" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAddPrescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/drawable_theme_8"
+                    android:fontFamily="@font/campton_semibold"
+                    android:gravity="center"
+                    android:text="@string/add_prescription"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_16"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMarkComplete"
+                    app:layout_goneMarginTop="@dimen/dp_24" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSymptom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/campton_semibold"
+                    android:maxLines="10"
+                    android:text="@string/symptoms"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_18"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddPrescription" />
+
+
+                <com.borjabravo.readmoretextview.ReadMoreTextView
+                    android:id="@+id/tvSymptomDec"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:fontFamily="@font/campton_book"
+                    android:gravity="start"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textColor"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="visible"
+                    app:colorClickableText="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSymptom"
+                    app:trimCollapsedText="@string/show_more"
+                    app:trimExpandedText="@string/show_less"
+                    app:trimLength="150"
+                    app:trimLines="3"
+                    app:trimMode="trimModeLength" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSymptomDoc"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:clipToPadding="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_8"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSymptomDec"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/rv_item_image" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSymptomListing"
+                    android:layout_width="match_parent"
+                    tools:itemCount="2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvSymptomDoc" />
+
+                <View
+                    android:id="@+id/viewNotClick"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/rvSymptomListing"
+                    app:layout_constraintEnd_toEndOf="@+id/rvSymptomListing"
+                    app:layout_constraintStart_toStartOf="@+id/rvSymptomListing"
+                    app:layout_constraintTop_toTopOf="@+id/rvSymptomListing" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMedicalRecordT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/campton_semibold"
+                    android:maxLines="10"
+                    android:text="@string/medical_record"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_18"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/rvSymptomListing" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMedicalRecord"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/campton_book"
+                    android:maxLines="10"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMedicalRecordT" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMedicalRecord"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:clipToPadding="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_8"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMedicalRecord"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/rv_item_image" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/clLoader"
+            layout="@layout/item_loader"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

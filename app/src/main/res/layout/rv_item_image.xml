@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivImage"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:scaleType="center"
+            android:src="@drawable/ic_camera"
+            android:background="@drawable/drawable_grey_stroke"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_border_color="@color/lineColor"
+            app:riv_border_width="@dimen/dp_2"
+            app:riv_corner_radius="@dimen/dp_8" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:padding="@dimen/dp_8"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone"
+            android:background="@drawable/drawable_white_rounded"
+            app:layout_constraintBottom_toBottomOf="@+id/ivImage"
+            app:layout_constraintEnd_toEndOf="@+id/ivImage"
+            app:layout_constraintStart_toStartOf="@+id/ivImage"
+            app:layout_constraintTop_toTopOf="@+id/ivImage"
+            app:riv_corner_radius="@dimen/dp_40" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dp_16" />
+
+        <CheckBox
+            android:id="@+id/cbBreakfast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:drawablePadding="@dimen/dp_16"
+            android:fontFamily="@font/campton_book"
+            android:text="@string/breakfast"
+            android:textColor="@color/textColor"
+            android:buttonTint="@color/colorPrimary"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+            app:layout_constraintStart_toStartOf="@id/startGuideLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBreakfastSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/campton_book"
+            android:padding="@dimen/dp_4"
+            android:text="@string/save"
+            android:visibility="gone"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+            app:layout_constraintTop_toTopOf="@+id/cbBreakfast" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBefore"
+            android:layout_width="86dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@drawable/drawable_doase_left_s"
+            android:fontFamily="@font/campton_book"
+            android:gravity="center"
+            android:text="@string/before"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toStartOf="@+id/tvAfter"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/startGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/cbBreakfast" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAfter"
+            android:layout_width="86dp"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/drawable_doase_midle"
+            android:fontFamily="@font/campton_book"
+            android:gravity="center"
+            android:text="@string/after"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toStartOf="@+id/tvWith"
+            app:layout_constraintStart_toEndOf="@+id/tvBefore"
+            app:layout_constraintTop_toTopOf="@+id/tvBefore" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWith"
+            android:layout_width="86dp"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/drawable_doase_right"
+            android:fontFamily="@font/campton_book"
+            android:gravity="center"
+            android:text="@string/with"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+            app:layout_constraintStart_toEndOf="@+id/tvAfter"
+            app:layout_constraintTop_toTopOf="@+id/tvBefore" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDosage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:alpha="0.7"
+            android:fontFamily="@font/campton_book"
+            android:text="@string/dosage"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="@id/tvWith"
+            app:layout_constraintStart_toStartOf="@id/tvBefore"
+            app:layout_constraintTop_toBottomOf="@+id/tvBefore" />
+
+        <Spinner
+            android:id="@+id/spnDosage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginTop="@dimen/dp_12"
+            android:fontFamily="@font/campton_medium"
+            android:textColor="@color/textColor"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="@id/tvWith"
+            app:layout_constraintStart_toStartOf="@id/tvDosage"
+            app:layout_constraintTop_toBottomOf="@+id/tvDosage" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvBefore,tvBefore,tvAfter,tvWith,tvDosage,spnDosage" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/lineColor"
+            app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+            app:layout_constraintStart_toStartOf="@id/startGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/spnDosage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

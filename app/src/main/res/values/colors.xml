@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#262F8A</color>
+    <color name="colorPrimaryDark">#262F8A</color>
+    <color name="colorAccent">#262F8A</color>
+
+    <color name="textColor">#484848</color>
+    <color name="textTitleColor">#4A566C</color>
+    <color name="lineColor">#334A566C</color>
+    <color name="textColorGreen">#52D56A</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="desc_transparent">#330491FF</color>
+    <color name="bgChat">#8477DF</color>
+    <color name="bgCall">#FF7860</color>
+    <color name="textAge">#5C6472</color>
+    <color name="textColor_50">#80484848</color>
+    <color name="colorPending">#FF8796</color>
+    <color name="colorPending_20">#33FF8796</color>
+    <color name="bgChat_20">#338477DF</color>
+    <color name="graph">#48D3B3</color>
+    <color name="colorLoginTag">#E7E8F2</color>
+    <color name="colorBanner">#39C6C0</color>
+    <color name="colorBgTransaction">#EFEFEF</color>
+    <color name="colorCancel">#FF5353</color>
+    <color name="colorLink">#0000A0</color>
+
+    <color name="colorSubCat">#283593</color>
+    <color name="colorWalkThrough">#58595B</color>
+    <color name="colorCalendar">#484848</color>
+    <color name="colorReset">#F02525</color>
+    <color name="colorStroke">#A1A1A1</color>
+    <color name="colorServiceText">#9A9A9A</color>
+</resources>

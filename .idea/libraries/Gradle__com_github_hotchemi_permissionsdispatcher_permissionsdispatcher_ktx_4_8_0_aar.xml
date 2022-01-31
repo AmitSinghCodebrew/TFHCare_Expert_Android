@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.hotchemi.permissionsdispatcher:permissionsdispatcher-ktx:4.8.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45f20926fb1b5911b45340f7889dd6a7/jetified-permissionsdispatcher-ktx-4.8.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45f20926fb1b5911b45340f7889dd6a7/jetified-permissionsdispatcher-ktx-4.8.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45f20926fb1b5911b45340f7889dd6a7/jetified-permissionsdispatcher-ktx-4.8.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.hotchemi.permissionsdispatcher/permissionsdispatcher-ktx/4.8.0/f4058facba26f721f10b6a83c2a35ea584d05732/permissionsdispatcher-ktx-4.8.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.hotchemi.permissionsdispatcher/permissionsdispatcher-ktx/4.8.0/2daf26241a5fb5a64a3aae37b04cf02a7e0e33b9/permissionsdispatcher-ktx-4.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
